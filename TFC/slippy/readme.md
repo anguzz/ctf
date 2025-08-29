@@ -121,6 +121,10 @@ Fetching it under `/files/tlhedn6f` outputs the flag.
 
 ---
 
+
+## Flag
+`TFCCTF{3at_sl1P_h4Ck_r3p3at_5af9f1}`
+
 ## Notes
 
 - I first tried replacing cookies in the browser, but the dev middleware also checked `req.ip`, so it was easier to spoof via curl.  
