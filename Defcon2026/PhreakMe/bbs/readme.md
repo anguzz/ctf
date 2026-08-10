@@ -36,6 +36,7 @@ At that point, I did not know what SyncTERM was, what ANSI-BBS meant, or why I n
 
 The web page opened a retro terminal and drew a lot of text and graphics. At first, it looked almost like some kind of virtual machine. I did not yet realize that it was ANSI art being rendered by a browser-based BBS client.
 
+
 ## The DEF CON Network Made It Frustrating
 
 The main reason I kept disconnecting was the poor network connection at DEF CON.
@@ -201,6 +202,7 @@ wss://phreakme.com:11235/
         |
         v
 PhreakMe Synchronet BBS
+
 ```
 
 ## Reaching the BBS but Getting Expunged
@@ -232,6 +234,11 @@ Charset: UTF-8
 YOU ARE EXPUNGED
 Connection closed by foreign host.
 ```
+
+Some related ascii art I later found calling this out.
+
+<img width="863" height="690" alt="Screenshot from 2026-08-07 20-40-07" src="https://github.com/user-attachments/assets/b974ba0a-1f34-43b0-9228-36e86cb16bff" />
+
 
 The BBS appeared to be deliberately enforcing the use of an ANSI/CP437-capable terminal. This was not only a visual preference. It detected my UTF-8 terminal and disconnected me.
 
@@ -282,11 +289,6 @@ Once SyncTERM opened, I was placed in its address book. I then:
 6. Set the terminal to ANSI-BBS/CP437.
 7. Saved the entry, selected it, and pressed `Enter` to connect.
 
-One important detail was that I could **not** configure SyncTERM to connect directly to:
-
-```text
-phreakme.com:11235
-```
 
 That would send raw Telnet negotiation to nginx instead of performing the required WebSocket handshake, producing the same `400 Bad Request` response.
 
@@ -313,9 +315,11 @@ Screen size:     80x25
 
 In other words, SyncTERM was dialing `127.0.0.1:2323`. That local port was not the BBS itself. It was the local side of the `websocat` bridge, which then performed the actual WebSocket connection to the PhreakMe server.
 
-> **Note added later:** After I'd already gotten both flags, I realized I probably didn't need the `websocat` bridge at all. SyncTERM's "Connection Type" field isn't limited to Telnet. It also supports SSH, RLogin, and raw TCP connections, and Synchronet's own terminal server natively speaks Telnet, RLogin, SSH, and raw TCP as well. If `phreakme.com` exposed an SSH-based BBS port, SyncTERM could likely have connected to it directly, with no WebSocket handshake involved, since the WS-only requirement I ran into was specific to nginx on port 11235, not necessarily every port on the box. I never went back to test this against phreakme.com specifically, so I can't say for certain it would have worked, but it's the first thing I'd try next time before building out a bridge.
+
+> **Note added later:** After I'd already gotten both flags, I realized I probably didn't need the `websocat` bridge at all. SyncTERM's "Connection Type" field isn't limited to Telnet. It also supports SSH, RLogin, and raw TCP connections, and Synchronet's own terminal server natively speaks Telnet, RLogin, SSH, and raw TCP as well. If `phreakme.com` exposed an SSH-based BBS port, SyncTERM could likely have connected to it directly, with no WebSocket handshake involved, since the WS-only requirement I ran into was specific to nginx on port 11235, not necessarily every port on the box. I never went back to test this against phreakme.com specifically, so I can't say for certain it would have worked, but it's the first thing I'd try next time before building out a bridge. 
 
 The complete working path was:
+
 
 ```text
 SyncTERM
@@ -331,6 +335,7 @@ wss://phreakme.com:11235/
    v
 PhreakMe BBS
 ```
+<img width="1920" height="1200" alt="Screenshot from 2026-08-07 15-33-51" src="https://github.com/user-attachments/assets/d755fb3a-8fd3-4a1f-9795-3544590d73f0" />
 
 When I selected the saved SyncTERM entry and pressed `Enter`, it successfully connected through `127.0.0.1:2323`, passed through the `websocat` bridge, and reached the PhreakMe BBS. The ANSI art finally rendered correctly, and the BBS stopped expunging me for using UTF-8.
 
@@ -347,6 +352,14 @@ This was also when I started to understand what a BBS actually was. Instead of a
 - User accounts
 - Online-user information
 - Text and ANSI artwork
+
+
+<img width="874" height="687" alt="Screenshot from 2026-08-07 20-38-04" src="https://github.com/user-attachments/assets/7dd3923a-cd86-4742-81f4-9fcb2f70bde5" />
+
+<img width="874" height="687" alt="Screenshot from 2026-08-07 20-38-58" src="https://github.com/user-attachments/assets/3e0f2dec-0bbd-40e9-ae91-5b3515b6d12f" />
+
+<img width="873" height="687" alt="Screenshot from 2026-08-07 22-34-55" src="https://github.com/user-attachments/assets/4e972c14-b394-4dce-afb6-97db4e29bedf" />
+
 
 The web page was only one possible client. The real system was the Synchronet BBS behind it.
 
@@ -370,11 +383,16 @@ A useful discovery was that message searches could be limited to subjects. Broad
 
 The BBS also used older file transfer protocols. Its download menu offered:
 
+
 ```text
 XMODEM
 YMODEM
 ZMODEM
 ```
+
+<img width="851" height="667" alt="image" src="https://github.com/user-attachments/assets/8072fab6-db03-4f6f-bd46-25efee788083" />
+
+<img width="1920" height="1200" alt="img1" src="https://github.com/user-attachments/assets/59226249-0bbe-4a5a-b9df-ad6905051558" />
 
 I had the most success with **ZMODEM**, which SyncTERM could handle directly.
 
@@ -636,3 +654,18 @@ The hardest part was not finding either flag. It was getting reliable access to 
 I started with a browser terminal that kept disconnecting on the DEF CON network and no real understanding of what a BBS was. By inspecting the page, understanding the WebSocket transport, using SyncTERM, learning about ANSI/CP437, and building my own recorder, I turned the BBS into something I could explore more methodically.
 
 I still find the BBS interface confusing, but I am much more comfortable with it than I was at the beginning. The two flags were the immediate result, but the more useful outcome was learning how this older style of system worked and building a workflow that made it manageable. 
+
+
+# Plovernet
+
+There was a challenge I wasn't able to solve where you had to pop a shell in plovernet, another net within the BBS.  
+
+It had it's own submenus, files, emails, and more.
+
+The login process was hidden in some of files inside the BBS. 
+
+<img width="858" height="675" alt="Screenshot from 2026-08-08 12-14-18" src="https://github.com/user-attachments/assets/2970a9c4-f2e7-458e-a844-64ce884de11a" />
+
+
+<img width="1016" height="794" alt="Screenshot from 2026-08-07 17-08-12" src="https://github.com/user-attachments/assets/bfedc4bb-bb5c-4c03-bd58-e86a62cd4d4f" />
+
