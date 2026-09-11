@@ -1,0 +1,43 @@
+﻿
+[21:26:27] === Dynamic enum start: 10.146.184.99 ===
+[21:26:27] --- Port scan ---
+[21:26:27] Scanning 44 ports (threads=60)...
+[21:26:27] OPEN: 22
+[21:26:27] OPEN: 80
+[21:26:27] --- Web root: http://10.146.184.99:80/ ---
+[21:26:28] [200] len=15757
+[21:26:28] --- LFI (dynamic) on index.php?page= ---
+[21:26:29] baseline  good(contact.html)=7505  notfound(random)=0  redirect(regex-fail)=15757
+[21:27:24]   SOURCE  home.html -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_home.html.txt
+[21:27:24]   SOURCE  about.html -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_about.html.txt
+[21:27:24]   SOURCE  services.html -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_services.html.txt
+[21:27:25]   SOURCE  portfolio.html -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_portfolio.html.txt
+[21:27:25]   SOURCE  contact.html -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_contact.html.txt
+[21:27:25]   SOURCE  index.php -> C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99\src_index.php.txt
+[21:27:30] LFI source pulls: 19 (recursion cap=40)
+[21:27:30] 6379 not open (try -FullPortScan).
+[21:27:30] --- Path check (seed + harvested) ---
+[21:27:30] [200] /assets/images/favicon.png
+[21:27:31] [200] /assets/css/bootstrap.min.css
+[21:27:31] [200] /assets/css/font-awesome.min.css
+[21:27:31] [200] /assets/css/bootstrap-theme.css
+[21:27:32] [200] /assets/css/da-slider.css
+[21:27:32] [200] /assets/css/style.css
+[21:27:32] [200] /assets/js/html5shiv.js
+[21:27:33] [200] /assets/js/respond.min.js
+[21:27:33] [200] /index.php
+[21:27:33] [200] /assets/images/logo.png
+[21:27:34] [200] /sidebar-right.html
+[21:27:34] [200] /assets/images/person_1.png
+[21:27:35] [200] /assets/images/person_2.png
+[21:27:35] [200] /assets/images/person_3.png
+[21:27:36] [200] /about.html
+[21:27:36] [200] /services.html
+[21:27:36] [200] /portfolio.html
+[21:27:37] [200] /contact.html
+[21:27:37] [200] /assets/js/modernizr-latest.js
+[21:27:37] [200] /assets/js/jquery.cslider.js
+[21:27:38] [200] /assets/js/headroom.min.js
+[21:27:38] [200] /assets/js/custom.js
+[21:27:43] === Done. Loot: C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_10_146_184_99 ===
+[21:27:43] Review: src_*.txt (dumped source), redis_key_*.txt, lfi_*.txt

